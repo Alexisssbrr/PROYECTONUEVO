@@ -8,8 +8,8 @@
     <meta content="Free HTML Templates" name="keywords">
     <meta content="Free HTML Templates" name="description">
 
-    <!-- Favicon -->
-    <link href="img/favicon.ico" rel="icon">
+    <!-- logo -->
+    <link href="img/logo.jpg" rel="icon">
 
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -24,6 +24,8 @@
 
     <!-- Customized Bootstrap Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
+
+    <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 
 <body>
@@ -66,7 +68,7 @@
             </button>
             <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
                 <div class="navbar-nav ml-auto py-0">
-                    <a href="index.html" class="nav-item nav-link active">Inicio</a>
+                    <a href="index.html" class="nav-item nav-link ">Inicio</a>
                     <a href="about.html" class="nav-item nav-link">Acerca de nosotros</a>
                 </div>
                 <a href="index.html" class="navbar-brand mx-5 d-none d-lg-block">
@@ -74,7 +76,7 @@
                 </a>
                 <div class="navbar-nav mr-auto py-0">
                     <a href="product.html" class="nav-item nav-link">Catálogo</a>
-                    <a href="contact.html" class="nav-item nav-link">Ubicación</a>
+                    <a href="contact.html" class="nav-item nav-link active">Contacto</a>
                 </div>
             </div>
         </nav>
@@ -83,16 +85,8 @@
 <!-- Navbar End -->
 
     <!-- Header Start -->
-    <div class="jumbotron jumbotron-fluid page-header" style="margin-bottom: 90px;">
-        <div class="container text-center py-5">
-            <h1 class="text-white display-3 mt-lg-5">Ubicación</h1>
-            <div class="d-inline-flex align-items-center text-white">
-                <p class="m-0"><a class="text-white" href="">Inicio</a></p>
-                <i class="fa fa-circle px-3"></i>
-                <p class="m-0">Ubicación</p>
-            </div>
-        </div>
-    </div>
+    
+    <img src="img/catalogo.png" alt="Descripción de la imagen" style="width: 100%; max-width: 100%; height: auto; display: block; margin: 0 auto;">
     <!-- Header End -->
 
 
@@ -112,7 +106,26 @@
         </div>
     </div>
     <!-- MAPA End -->
+    <!--Forms-->
+    <!--$sql = "INSERT into comentarios(name,email,message) VALUES('$user','$email','$message')";-->
 
+    <div class="container-fluid bg-light py-5">
+        <div class="col-md-6 m-auto text-center">
+            <h1 class="colorsito">Contáctanos</h1>
+        </div>
+    </div>
+    
+    <div class="contact-form">
+        <form action="http://localhost:3307/PI2/PROYECTONUEVO/contacto.php" method="POST">
+          <label for="name">Name:</label>
+          <input type="text" id="name" required="">
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required="">
+          <label for="message">Message:</label>
+          <textarea id="message" name="message" required=""></textarea>
+          <button type="submit">Submit</button>
+        </form>
+      </div>
 
 <!-- Footer Start -->
 <div class="container-fluid footer bg-light py-5" style="margin-top: 90px;">
