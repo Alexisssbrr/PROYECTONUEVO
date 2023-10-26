@@ -10147,5 +10147,65 @@ h6,
 
 .colorsito {
   font-size: 2.5rem;
-  color: #F195B2;
+  color: #1b1b1b;
+}
+
+
+.zoom-container {
+  overflow: hidden;
+  position: relative;
+}
+
+#product-image {
+  transition: transform 0.5s;
+}
+
+#product-image:hover {
+  transform: scale(1.2);
+}
+
+.centered-image {
+    display: block;
+    margin: 0 auto;
+}
+
+/* Aquí van otros estilos existentes que puedas tener en tu archivo CSS */
+
+/* Estilo para centrar el formulario */
+.contact-form {
+  text-align: center;
+  margin: 0 auto;
+  max-width: 400px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  background-color: #F195B2;
+}
+
+/* Estilo para los elementos del formulario */
+.contact-form label {
+  display: block;
+  margin-top: 10px;
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.contact-form button {
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Cambia el estilo del botón al pasar el cursor */
+.contact-form button:hover {
+  background-color: #0056b3;
 }
