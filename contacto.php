@@ -1,10 +1,18 @@
 <?php
-$con = mysqli_connect("localhost", "root", "", "prueba",3307);
+$con = new mysqli ("localhost", "root", "", "verynice", 3307); 
 
-$name = $_POST['name'];
-$email = $_POST['email'];
-$message = $_POST['message'];
+if (isset($_POST['enviar'])) {
+    $name = $_POST['nombre'];
+    $email = $_POST['correo'];
+    $subject = $_POST['asunto'];
+    $message = $_POST['mensaje'];
 
-echo'test';
+
+    $insertarcomentarios = $con->prepare("INSERT INTO comentarios (nombre, correo, asunto, mensaje) VALUES (?, ?, ?, ?)");
+    $insertarcomentarios->bind_param("ssss", $name, $email, $subject, $message);
+    $insertarcomentarios->execute();
+    $insertarcomentarios->close();
+}
+
 
 ?>
