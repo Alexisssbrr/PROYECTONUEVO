@@ -9,7 +9,7 @@
     <meta content="Free HTML Templates" name="description">
 
     <!-- logo -->
-    <link href="img/logo.jpg" rel="icon">
+    <link href="img/logo.png" rel="icon">
 
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -32,21 +32,19 @@
     <!-- Topbar Start -->
     <div class="container-fluid bg-primary py-3 d-none d-md-block">
         <div class="container">
-            <div class="row">
+            <div class="row align-items-center">
                 <div class="col-md-6 text-center text-lg-left mb-2 mb-lg-0">
-                    <div class="d-inline-flex align-items-center">
-                        <a href="login.html">        
-                            <button>Iniciar sesión</button>
-                        </a>
+                    <div class="d-flex align-items-center">
+                        <!-- Contenedor para la imagen con un tamaño máximo -->
+                        <div style="max-width: 200px;">
+                        
+                        </div>
                     </div>
                 </div>
                 <div class="col-md-6 text-center text-lg-right">
                     <div class="d-inline-flex align-items-center">
-                        <a class="text-white px-3" href="https://www.facebook.com/VeryniceRentals">
-                            <i class="fab fa-facebook-f"></i>
-                        </a>
-                        <a class="text-white px-3" href="https://www.instagram.com/verynicerentals/ ">
-                            <i class="fab fa-instagram"></i>
+                        <a href="login.html" class="hover-color">
+                            <button class="btn btn-light derecha">Iniciar sesión</button>
                         </a>
                     </div>
                 </div>
@@ -72,7 +70,7 @@
                     <a href="about.html" class="nav-item nav-link">Acerca de nosotros</a>
                 </div>
                 <a href="index.html" class="navbar-brand mx-5 d-none d-lg-block">
-                    <img width="100" src="img/logo.jpg"/>
+                    <img width="150" src="img/logo.png"/>
                 </a>
                 <div class="navbar-nav mr-auto py-0">
                     <a href="product.html" class="nav-item nav-link">Catálogo</a>
@@ -86,22 +84,21 @@
 
     <!-- Header Start -->
     
-    <img src="img/catalogo.png" alt="Descripción de la imagen" style="width: 100%; max-width: 100%; height: auto; display: block; margin: 0 auto;">
+    <img src="img/cat.png" alt="Descripción de la imagen" style="width: 100%; max-width: 100%; height: auto; display: block; margin: 0 auto;">
     <!-- Header End -->
 
 
     <!-- MAPA Start -->
     <div class="container-fluid bg-light py-5">
-        <div class="col-md-6 m-auto text-center">
+        <div class="col-md-6 m-auto text-center" id="div_color_mapa">
             <h1 class="colorsito">Ubícanos en el mapa</h1>
             <p>
                 Ven y visitanos, con nosotros encontrarás los mejores precios
             </p>
         </div>
     </div>
-    <br>
     <div>
-        <div style =" text-align: center ">
+        <div style =" text-align: center " id="div_color_mapa">
             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d896.2960472654919!2d-98.23884987154167!3d26.027528803662843!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x86650e692928fae3%3A0xa56d1e1a79f342a8!2sAv.%2020%20de%20Noviembre%20445!5e0!3m2!1ses-419!2smx!4v1697592840809!5m2!1ses-419!2smx" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
     </div>
@@ -109,26 +106,47 @@
     <!--Forms-->
     <!--$sql = "INSERT into comentarios(name,email,message) VALUES('$user','$email','$message')";-->
 
-    <div class="container-fluid bg-light py-5">
-        <div class="col-md-6 m-auto text-center">
-            <h1 class="colorsito">Contáctanos</h1>
+    <div class="container-fluid py-5">
+        <div class="container py-5">
+            <div class="row justify-content-center">
+                <div class="col-lg-6">
+                    <h1 class="section-title position-relative text-center mb-5">Contáctanos</h1>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-lg-9">
+                    <div class="contact-form bg-form rounded p-5">
+                        <form name="sentMessage" id="contactForm" novalidate="novalidate" action="/contacto.php" method="POST">
+                            <div class="form-row">
+                                <div class="col-sm-6 control-group">
+                                    <input name="nombre" type="text" class="form-control p-4" id="name" placeholder="Nombre" required="required" />
+                                    <p class="help-block text-danger"></p>
+                                </div>
+                                <div class="col-sm-6 control-group">
+                                    <input  name="correo"  type="email" class="form-control p-4" id="email" placeholder="Correo" required="required" />
+                                    <p class="help-block text-danger"></p>
+                                </div>
+                            </div>
+                            <div class="control-group">
+                                <input name="Asunto" type="text" class="form-control p-4" id="subject" placeholder="Asunto" required="required" />
+                                <p class="help-block text-danger"></p>
+                            </div>
+                            <div class="control-group">
+                                <textarea name="mensaje" class="form-control p-4" rows="6" id="message" placeholder="Mensaje" required="required" ></textarea>
+                                <p class="help-block text-danger"></p>
+                            </div>
+                            <div>
+                                <button name="enviar" type="submit" id="sendMessageButton">Enviar</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
-    
-    <div class="contact-form">
-        <form action="http://localhost:3307/PI2/PROYECTONUEVO/contacto.php" method="POST">
-          <label for="name">Name:</label>
-          <input type="text" id="name" required="">
-          <label for="email">Email:</label>
-          <input type="email" id="email" name="email" required="">
-          <label for="message">Message:</label>
-          <textarea id="message" name="message" required=""></textarea>
-          <button type="submit">Submit</button>
-        </form>
-      </div>
 
 <!-- Footer Start -->
-<div class="container-fluid footer bg-light py-5" style="margin-top: 90px;">
+<div class="container-fluid footer bg-light py-5" style="padding-top: 90px;">
     <div class="container text-center py-5">
         <div class="row">
             <div class="col-12 mb-4">
@@ -138,7 +156,9 @@
             </div>
             <div class="col-12 mb-4">
                 <a class="btn btn-outline-secondary btn-social mr-2" href="https://www.facebook.com/VeryniceRentals/"><i class="fab fa-facebook-f"></i></a>
+                <span style="margin-right: 20px;">Verynice Rentals</span>
                 <a class="btn btn-outline-secondary btn-social" href="https://www.instagram.com/verynicerentals/"><i class="fab fa-instagram"></i></a>
+                <span>verynicerentals</span>
             </div>
             <div class="col-12 mt-2 mb-4">
                 <div class="row">
@@ -155,10 +175,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-12">
-                <p class="m-0">&copy; <a href="#">Domain</a>. All Rights Reserved. Designed by <a href="https://htmlcodex.com">HTML Codex</a>
-                </p>
-            </div>
+           
         </div>
     </div>
 </div>
