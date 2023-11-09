@@ -40,6 +40,7 @@
 *::before,
 *::after {
   box-sizing: border-box;
+  background-color: ;
 }
 
 html {
@@ -61,7 +62,7 @@ body {
   line-height: 1.5;
   color: #555555;
   text-align: left;
-  background-color: #F3F6FF;
+  background-color: #fff;
 }
 
 [tabindex="-1"]:focus:not(:focus-visible) {
@@ -10147,5 +10148,157 @@ h6,
 
 .colorsito {
   font-size: 2.5rem;
-  color: #F195B2;
+  color: #1b1b1b;
+}
+
+
+.zoom-container {
+  overflow: hidden;
+  position: relative;
+}
+
+#product-image {
+  transition: transform 0.5s;
+}
+
+#product-image:hover {
+  transform: scale(1.2);
+}
+
+.centered-image {
+    display: block;
+    margin: 0 auto;
+}
+
+/* Aquí van otros estilos existentes que puedas tener en tu archivo CSS */
+
+/* Estilo para centrar el formulario */
+.contact-form {
+  text-align: center;
+  margin: 0 auto;
+  max-width: 1000px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  background-color: #fff;
+}
+
+/* Estilo para los elementos del formulario */
+.contact-form label {
+  display: block;
+  margin-top: 10px;
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.contact-form button {
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Cambia el estilo del botón al pasar el cursor */
+.contact-form button:hover {
+  background-color: #0056b3;
+}
+
+.rosita {
+color:#ffc107 ;
+}
+
+#div_color {
+  background-color: #FFFFFF !important;
+}
+
+#div_color_mapa {
+  background-color: white;
+}
+
+.aboutus{
+  padding: 1.25em 1.625em;
+
+}
+
+.bg-form{
+  background-color: #f1b0b7; 
+}
+
+.responsive-img {
+  max-width: 100%;
+  height: auto;
+}
+
+
+.derecha{
+  transform:translateX(150px);
+
+}
+.border-box {
+  border: 2px solid #000; /* Define el grosor y el color del borde */
+  padding: 10px; /* Añade un espacio interno entre el borde y el texto */
+  display: inline-block; /* Para que el borde se ajuste al tamaño del contenido */
+}
+
+/*shop now*/
+
+
+
+.cta span {
+  padding-bottom: 7px;
+  letter-spacing: 4px;
+  font-size: 20px;
+  padding-right: 15px;
+  text-transform: uppercase;
+}
+
+.cta svg {
+  transform: translateX(-8px);
+  transition: all 0.3s ease;
+}
+
+.cta:hover svg {
+  transform: translateX(0);
+}
+
+.cta:active svg {
+  transform: scale(0.9);
+}
+
+.hover-underline-animation {
+  position: relative;
+  color: black;
+  padding-bottom: 20px;
+}
+
+.hover-underline-animation:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color:palevioletred;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.cta:hover .hover-underline-animation:after {
+  transform: scaleX(1);
+  
+}
+
+/* inicio de sesion */
+/* Cambia el color del texto cuando el cursor está encima del enlace */
+.hover-color:hover .btn {
+  color:palevioletred; /* Puedes cambiar 'red' por el color que desees */
 }
