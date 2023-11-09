@@ -1,0 +1,45 @@
+.limit {
+    width: 900px; 
+    height: 50px; 
+    border: 1px solid #ffffff;
+    border-collapse: collapse; 
+  }
+
+  .center {
+    display: flex;
+    justify-content: center; 
+    height: 100vh; 
+  }
+
+  .table-color {
+    --bs-table-color: #fff;
+    --bs-table-bg: #D5AECF;
+    --bs-table-border-color: #fff;
+    --bs-table-striped-bg: #040609;
+    --bs-table-striped-color: #fff;
+    --bs-table-active-bg: #3f4959;
+    --bs-table-active-color: #652626;
+    --bs-table-hover-bg: #3e76d5;
+    --bs-table-hover-color: #fff;
+    color: var(--bs-table-color);
+    border-color: var(--bs-table-border-color);
+    border: 1px solid #040609;
+  }
+
+  .basura::before {
+    font-family: 'Font Awesome 5 Free'; 
+    content: '\f2ed'; 
+  }
+
+  .editar::before {
+    font-family: 'Font Awesome 5 Free'; 
+    content: '\f044'; 
+  }
+
+  td i {
+    margin-right: 15px; 
+  }
+
+  .celdaborde {
+    border: 1px solid #000;
+  }
