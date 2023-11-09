@@ -16,7 +16,7 @@ if ($con->connect_error) {
         $data = $stmt_result->fetch_assoc();
 
         if (password_verify($password, $data['password'])) {
-            echo "<h2>Se ha iniciado sesión correctamente</h2>";
+            header("Location:administrador/src/html/index.html");
         } else {
             echo "<h2>El correo o la contraseña son inválidos</h2>";
         }
